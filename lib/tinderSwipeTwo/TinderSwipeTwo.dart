@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'profile_card_dragable.dart';
+import 'package:starterkit/home_page.dart';
 
 
 class TinderSwipeTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: new ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: new MyHomePage(),
+    return new Scaffold(
+      body: new MyHomePage(),
+      backgroundColor: Colors.blue,
     );
   }
 }
@@ -30,6 +27,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildAppBar() {
     return new AppBar(
       title: new Text("Tinder Swipe"),
+      actions: <Widget>[
+        IconButton(
+          icon: Image.asset('assets/ic_delete.png'),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        )
+      ],
     );
   }
 

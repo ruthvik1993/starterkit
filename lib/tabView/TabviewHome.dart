@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'Utils/Utils.dart';
+import 'package:starterkit/home_page.dart';
 
 
 class TabViewHome extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Tabs Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Tabs Demo'),
+    return Scaffold(
+      body: MyHomePage(title: 'Flutter Tabs Demo'),
+      backgroundColor: Colors.blue,
     );
   }
 }
@@ -43,6 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
             )
           ]),
           title: Text("Flutter Tabs Demo"),
+          actions: <Widget>[
+            IconButton(
+              icon: Image.asset('assets/ic_delete.png'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
         ),
         body: TabBarView(children: [
           Icon(Icons.directions_car),

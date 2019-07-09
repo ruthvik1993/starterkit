@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'Cards.dart';
 import 'Matches.dart';
 import 'Profiles.dart';
+import 'package:starterkit/home_page.dart';
 
 
 final MatchEngine matchEngine = new MatchEngine(
@@ -13,13 +14,9 @@ final MatchEngine matchEngine = new MatchEngine(
 class TinderSwipeOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: 'Flutter Demo',
-      theme: new ThemeData(
-        primaryColorBrightness: Brightness.light,
-        primarySwatch: Colors.blue,
-      ),
-      home: new MyHomePage(),
+    return new Scaffold(
+      body: new MyHomePage(),
+      backgroundColor: Colors.blue,
     );
   }
 }
@@ -49,14 +46,10 @@ class _MyHomePageState extends State<MyHomePage> {
         colors: Colors.red,
       ),
       actions: <Widget>[
-        new IconButton(
-          icon: new Icon(
-            Icons.chat_bubble,
-            color: Colors.grey,
-            size: 40.0,
-          ),
+        IconButton(
+          icon: Image.asset('assets/ic_delete.png'),
           onPressed: () {
-            // TODO:
+            Navigator.pop(context);
           },
         )
       ],

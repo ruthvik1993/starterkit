@@ -2,18 +2,12 @@ import 'package:starterkit/authenticationModule/utils/Utils.dart';
 import 'package:flutter/material.dart';
 import 'package:starterkit/authenticationModule/SignIn.dart';
 
-
 class AuthenticationHome extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        textTheme: new TextTheme(body1: new TextStyle(color: Colors.white)),
-        primaryColor: Utils.createMaterialColor(Color(0xFF0ACB7B)),
-      ),
-      home: SplashScreen(),
+    return Scaffold(
+      body: SplashScreen(),
     );
   }
 }
@@ -67,12 +61,23 @@ class _SplashPageState extends State<SplashScreen> {
         SizedBox(height: 20.0),
         new Text(
           'Company Name',
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white),
         ),
       ],
     );
 
     return new Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        actions: <Widget>[
+          IconButton(
+            icon: Image.asset('assets/ic_delete.png'),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )
+        ],
+      ),
       body: new Container(
           color: Theme.of(context).primaryColor,
           padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
@@ -103,7 +108,6 @@ class _SplashPageState extends State<SplashScreen> {
 
   void _sigup() {
     // Navigate to Signup Screen
-
   }
 
   void _sigin() {

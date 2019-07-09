@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'dart:ui' as ui;
-
+import 'package:starterkit/home_page.dart';
 
 class MapUi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter MapUi'),
+    return Scaffold(
+      body: MyHomePage(title: 'Flutter MapUi'),
+      backgroundColor: Colors.blue,
     );
   }
 }
@@ -35,6 +32,14 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
         backgroundColor: Colors.blue,
+        actions: <Widget>[
+          IconButton(
+            icon: Image.asset('assets/ic_delete.png'),
+            onPressed: () {
+             Navigator.pop(context);
+            },
+          )
+        ],
       ),
       body: GoogleMap(
         onMapCreated: (GoogleMapController controller) {

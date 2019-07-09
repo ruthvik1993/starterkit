@@ -6,6 +6,7 @@ import 'mapWithPlots/MapUi.dart';
 import 'authenticationModule/AuthenticationHome.dart';
 import 'tinderSwipeOne/TinderSwipeOne.dart';
 import 'tinderSwipeTwo/TinderSwipeTwo.dart';
+import 'introScreensModule/IntroScreensHomePage.dart';
 
 class HomePage extends StatelessWidget {
   String tag = 'home-page';
@@ -93,6 +94,8 @@ class StarterKitMenu extends State<ModuleSelectionScreen> {
       Navigator.push(context, MaterialPageRoute(builder: (context) => TinderSwipeOne()),);
     }else if(moduleName == "Tinder Swipe Two"){
       Navigator.push(context, MaterialPageRoute(builder: (context) => TinderSwipeTwo()),);
+    }else if(moduleName == "Intro Screens"){
+      Navigator.push(context, MaterialPageRoute(builder: (context) => IntroScreenHomePage()));
     }
   }
 

@@ -4,19 +4,16 @@ import 'Fragments/Fragment2.dart';
 import 'Fragments/Fragment3.dart';
 import 'Fragments/Fragment4.dart';
 import 'Fragments/Fragment5.dart';
+import 'package:starterkit/home_page.dart';
 import 'Utils/Utils.dart';
-
 
 class NavigationDrawerApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Navigation Drawer'),
+    return Scaffold(
+      body: MyHomePage(title: 'Flutter Navigation Drawer'),
+      backgroundColor: Colors.blue,
     );
   }
 }
@@ -61,6 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Flutter Navigation Drawer"),
+        actions: <Widget>[
+          IconButton(
+            icon: Image.asset('assets/ic_delete.png'),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          )
+        ],
       ),
       drawer: new Drawer(
         child: new ListView(
