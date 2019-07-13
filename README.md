@@ -14,3 +14,27 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.dev/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
+
+## Install Flutter
+
+Setting up flutter :
+
+--Install flutter for Windows/iOS from this URL - https://flutter.dev/docs/get-started/install
+
+For detailed instructions you can have a look at https://flutter.dev/docs/get-started/install/windows
+
+Setting up Android Studio:
+
+--Download and install Android Studio from https://developer.android.com/studio
+
+Install the Flutter and Dart plugins
+
+--Start Android Studio.
+--Open plugin preferences (Preferences > Plugins on macOS, File > Settings > Plugins on Windows & Linux).
+--Select Browse repositories, select the Flutter plugin and click Install.
+--Click Yes when prompted to install the Dart plugin.
+--Click Restart when prompted.
+
+
+Import project to android studio usin GITHUB and run the app
+
